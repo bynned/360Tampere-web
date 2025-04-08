@@ -19,12 +19,16 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">360°Tampere</h1>
           <p className="text-xl md:text-2xl mb-8 text-blue-50">Experience Tampere in 360° - Bringing the city to life, virtually anywhere, anytime!</p>
-          <a
-            href="#contact"
-            className="bg-white text-blue-700 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors"
-          >
-            Explore Our 360° Tours
-          </a>
+          <p className="text-l md:text-2xl mb-8 text-blue-50">Scan the QR to view what we can do!</p>
+          <div className="flex justify-center mb-8">
+            <div className="bg-white p-4 rounded-xl shadow-lg">
+              <img 
+                src="/QRCode.png" 
+                alt="QR Code to Demo" 
+                className="w-48 h-48 object-contain"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
