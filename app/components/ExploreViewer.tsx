@@ -1,8 +1,9 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import * as PhotoSphereViewer from 'photo-sphere-viewer';
+import { Viewer } from '@photo-sphere-viewer/core';
 import 'photo-sphere-viewer/dist/photo-sphere-viewer.css';
+import { GyroscopePlugin } from '@photo-sphere-viewer/gyroscope-plugin';
 
 export default function ExploreDemo() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -10,15 +11,15 @@ export default function ExploreDemo() {
   useEffect(() => {
     if (!containerRef.current) return;
 
-    const viewer = new PhotoSphereViewer.Viewer({
+    const viewer = new Viewer({
       container: containerRef.current,
       panorama: '/demopicture.png',
-      defaultLat: 0,
-      defaultLong: 0,
       mousewheel: true,
       moveSpeed: 1,
       touchmoveTwoFingers: false,
-      useXmpData: false,
+      plugins: [
+        GyroscopePlugin,
+      ],
     });
 
     return () => viewer.destroy();
