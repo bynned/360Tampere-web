@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import PhotoSphereViewer from 'photo-sphere-viewer';
+import * as PhotoSphereViewer from 'photo-sphere-viewer';
 import 'photo-sphere-viewer/dist/photo-sphere-viewer.css';
 
 export default function ExploreDemo() {
