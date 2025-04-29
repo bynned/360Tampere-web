@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { Viewer } from '@photo-sphere-viewer/core';
 import '@photo-sphere-viewer/core/index.css';
+import '@photo-sphere-viewer/video-plugin/index.css';
 import { GyroscopePlugin } from '@photo-sphere-viewer/gyroscope-plugin';
 import { EquirectangularVideoAdapter } from '@photo-sphere-viewer/equirectangular-video-adapter';
 import { VideoPlugin } from '@photo-sphere-viewer/video-plugin';
