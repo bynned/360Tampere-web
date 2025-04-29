@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@photo-sphere-viewer/gyroscope-plugin": "^5.13.1",
+    "@photo-sphere-viewer/core": "^5.13.2",
+    "@photo-sphere-viewer/equirectangular-video-adapter": "^5.13.2",
+    "@photo-sphere-viewer/gyroscope-plugin": "^5.13.2",
+    "@photo-sphere-viewer/video-plugin": "^5.13.2",
     "next": "15.2.4",
     "photo-sphere-viewer": "^4.8.1",
     "react": "^19.0.0",

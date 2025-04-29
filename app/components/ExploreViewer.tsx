@@ -4,7 +4,8 @@ import { useEffect, useRef } from 'react';
 import { Viewer } from '@photo-sphere-viewer/core';
 import '@photo-sphere-viewer/core/index.css';
 import { GyroscopePlugin } from '@photo-sphere-viewer/gyroscope-plugin';
-
+import { EquirectangularVideoAdapter } from '@photo-sphere-viewer/equirectangular-video-adapter';
+import { VideoPlugin } from '@photo-sphere-viewer/video-plugin';
 export default function ExploreDemo() {
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -13,12 +14,13 @@ export default function ExploreDemo() {
     if (!containerRef.current || !videoRef.current) return;
 
     const viewer = new Viewer({
+      adapter: EquirectangularVideoAdapter,
       container: containerRef.current,
       panorama: videoRef.current,
       mousewheel: true,
       moveSpeed: 1,
       touchmoveTwoFingers: false,
-      plugins: [GyroscopePlugin],
+      plugins: [GyroscopePlugin, VideoPlugin],
     });
 
     return () => viewer.destroy();
