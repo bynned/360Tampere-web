@@ -3,6 +3,9 @@
 import { Inter } from 'next/font/google';
 import { usePathname } from 'next/navigation';
 import './globals.css';
+import 'photo-sphere-viewer/dist/photo-sphere-viewer.css';
+import '@photo-sphere-viewer/core/index.css';
+
 
 const inter = Inter({ subsets: ['latin'] });
 

@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 import { Viewer } from '@photo-sphere-viewer/core';
 import 'photo-sphere-viewer/dist/photo-sphere-viewer.css';
 import { GyroscopePlugin } from '@photo-sphere-viewer/gyroscope-plugin';
+import '@photo-sphere-viewer/core/index.css';
 
 export default function ExploreDemo() {
   const containerRef = useRef<HTMLDivElement>(null);
