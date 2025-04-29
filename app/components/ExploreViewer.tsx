@@ -18,7 +18,8 @@ export default function ExploreDemo() {
       container: containerRef.current,
       adapter: EquirectangularVideoAdapter,
       panorama: {
-        source: 'https://www.360service.ilab.fi/uploads/680f94f7faf266d47c2211e7/Keskustori.mp4?apiKey=2d39e5b9-a07a-4be2-b700-9c38f4de5c36'
+        source: 'https://www.360service.ilab.fi/uploads/680f94f7faf266d47c2211e7/Keskustori.mp4?apiKey=2d39e5b9-a07a-4be2-b700-9c38f4de5c36',
+        autoplay: true,
       },
       mousewheel: true,
       moveSpeed: 1,
